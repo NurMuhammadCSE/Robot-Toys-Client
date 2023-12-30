@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import img from "../../assets/signup.jpg";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -178,6 +179,7 @@ const SignUp = () => {
                 Login
               </Link>{" "}
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

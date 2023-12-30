@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/img.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -77,7 +78,7 @@ const Login = () => {
                 Sign Up
               </Link>{" "}
             </p>
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

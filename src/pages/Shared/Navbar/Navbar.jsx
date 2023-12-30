@@ -3,33 +3,53 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navbar = () => {
-  const {user} = useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+    .then(() => {})
+    .catch(error => console.log(error))
+  }
   const navMenu = (
     <>
       <li>
-        <Link to={'/'}>Home</Link>
+        <Link to={"/"}>Home</Link>
       </li>
       <li>
-        <Link to={'/'}>All Toys</Link>
+        <Link to={"/"}>All Toys</Link>
       </li>
       <li>
-        <Link to={'/'}>My Toys</Link>
+        <Link to={"/"}>My Toys</Link>
       </li>
       <li>
-        <Link to={'/'}>Add A Toy</Link>
+        <Link to={"/"}>Add A Toy</Link>
       </li>
       <li>
-        <Link to={'/'}>Blogs</Link>
+        <Link to={"/"}>Blogs</Link>
       </li>
-      <li>
-        <Link to={'/login'}>Login</Link>
-      </li>
+
+      {user?.email ? (
+        <>
+          <li onClick={handleLogout}>
+            <Link>Logout</Link>
+          </li>
+
+          <li>
+            <div className="avatar">
+              <div className="w-12 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </div>
+          </li>
+        </>
+      ) : (
+        <li>
+          <Link to={"/login"}>Login</Link>
+        </li>
+      )}
     </>
   );
   return (
-    <div
-      className="navbar font-bold bg-[#dfd8d0] justify-between"
-    >
+    <div className="navbar font-bold bg-[#dfd8d0] justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +70,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu items-center menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navMenu}
           </ul>
@@ -60,7 +80,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navMenu}</ul>
+        <ul className="menu items-center menu-horizontal px-1">{navMenu}</ul>
       </div>
     </div>
   );
