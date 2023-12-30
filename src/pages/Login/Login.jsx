@@ -1,6 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/img.jpg";
 import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -55,6 +56,17 @@ const Login = () => {
                   placeholder="password"
                   className="input input-bordered"
                 />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Confirm Password</span>
+                </label>
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                  className="input input-bordered"
+                />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
@@ -70,12 +82,12 @@ const Login = () => {
               </div>
             </form>
             <p className="my-4 text-center">
-              New to Car Doctors{" "}
+             Brand New to Robot Toys{" "}
               <Link className="text-orange-600 font-bold" to="/signup">
                 Sign Up
               </Link>{" "}
             </p>
-            <SocialLogin></SocialLogin>
+            {/* <SocialLogin></SocialLogin> */}
           </div>
         </div>
       </div>

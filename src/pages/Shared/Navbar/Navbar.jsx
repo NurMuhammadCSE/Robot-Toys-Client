@@ -4,22 +4,22 @@ const Navbar = () => {
   const navMenu = (
     <>
       <li>
-        <a>Home</a>
+        <Link to={'/'}>Home</Link>
       </li>
       <li>
-        <a>All Toys</a>
+        <Link to={'/'}>All Toys</Link>
       </li>
       <li>
-        <a>My Toys</a>
+        <Link to={'/'}>My Toys</Link>
       </li>
       <li>
-        <a>Add A Toy</a>
+        <Link to={'/'}>Add A Toy</Link>
       </li>
       <li>
-        <a>Blogs</a>
+        <Link to={'/'}>Blogs</Link>
       </li>
       <li>
-        <a>Login</a>
+        <Link to={'/login'}>Login</Link>
       </li>
     </>
   );
