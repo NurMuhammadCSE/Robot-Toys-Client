@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Category = () => {
   const [allToys, setAllToys] = useState([]);
@@ -21,7 +22,11 @@ const Category = () => {
 
   return (
     <div>
-      <h2>Shop by Category</h2>
+      <SectionTitle
+        heading={"Category Showcase"}
+        subHeading={"Discover a World of Robotic Toys"}
+      ></SectionTitle>
+      {/* <h2>Shop by Category</h2> */}
       <Tabs>
         <div className="flex justify-center items-center mb-4">
           <TabList className="flex gap-4">
@@ -31,16 +36,16 @@ const Category = () => {
           </TabList>
         </div>
 
-        <div className="">
+        <div className="my-10">
           {categories.map((category, index) => (
             <TabPanel key={index}>
               {/* <h3>{category}</h3> */}
-              <div className="flex flex-wrap justify-center items-center">
+              <div className="flex flex-wrap justify-center items-center gap-10">
                 {allToys
                   .filter((toy) => toy.subCategory === category)
                   .map((filteredToy, i) => (
                     <div key={i} className="toy-card">
-                      <div className="card w-96 bg-base-100 shadow-xl">
+                      <div className="card w-96 bg-base-300 shadow-xl">
                         <figure className="px-10 pt-10">
                           <img
                             src={filteredToy.pictureURL}

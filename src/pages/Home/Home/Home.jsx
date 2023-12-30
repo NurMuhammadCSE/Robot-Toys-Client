@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
-import CategoryTab from "../Category/CategoryTab";
 import Category from "../Category/Category";
+import SwiperGallery from "../SwiperGallery/SwiperGallery";
+import Testimonial from "../Testimonial/Testimonial";
 
 const Home = () => (
   <>
@@ -11,8 +12,9 @@ const Home = () => (
 
     <div>
       <Banner />
-      {/* <CategoryTab></CategoryTab> */}
+      <SwiperGallery></SwiperGallery>
       <Category></Category>
+      <Testimonial></Testimonial>
     </div>
   </>
 );
