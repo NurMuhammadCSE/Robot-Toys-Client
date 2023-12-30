@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 const Banner = () => {
   return (
     <div className="my-10">
-      <Carousel  showArrows={true}>
+      <Carousel showArrows={true}>
         <div className="hero min-h-screen bg-[#EDA4BD] py-16">
           <div className="hero-content flex-col lg:flex-row-reverse items-center">
             <img
@@ -17,7 +17,7 @@ const Banner = () => {
             />
             <div className="text-center text-[#] lg:text-center">
               <h1 className="text-5xl font-bold ">
-                Revolutionize Reality: Embark on a Robotic Extravaganza!
+                EVERYTHING ROBOTICS INFINITE POSSIBILITIES
               </h1>
               <p className="py-6">
                 In the crucible of advancement, each line of code is a

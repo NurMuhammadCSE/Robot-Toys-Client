@@ -1,0 +1,112 @@
+[
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/airbit-2-programmable-drone-construction-kit-w-2x-microbit--wifi-camera--fly-more-kit-4_500x.jpg?v=1698931797",
+    "name": "RoboExplorer",
+    "sellerName": "TechToys Co.",
+    "sellerEmail": "seller@example.com",
+    "subCategory": "Educational and Learning Toys",
+    "price": 29.99,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "The RoboExplorer is a programmable robot that teaches kids the basics of coding and robotics. It's a fun and educational toy for aspiring young engineers."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/airbit-2-programmable-drone-construction-kit-w-2x-microbit--wifi-camera--fly-more-kit-4_500x.jpg?v=1698931797",
+    "name": "CodeMasterBot",
+    "sellerName": "RoboTech Innovations",
+    "sellerEmail": "robo.tech@example.com",
+    "subCategory": "Educational and Learning Toys",
+    "price": 39.99,
+    "rating": 4.7,
+    "availableQuantity": 30,
+    "description": "CodeMasterBot is an advanced coding robot designed for kids to learn programming concepts in a playful way. It's perfect for young coding enthusiasts."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/4d1383b9_209_500x.jpg?v=1699658712",
+    "name": "MathWizard Robot",
+    "sellerName": "LearningToys Store",
+    "sellerEmail": "learning.toys@example.com",
+    "subCategory": "Educational and Learning Toys",
+    "price": 24.99,
+    "rating": 4.2,
+    "availableQuantity": 40,
+    "description": "MathWizard Robot helps kids develop math skills through interactive and engaging activities. It covers various math concepts in a fun and exciting way."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/mini-dfrobotshop-rover-kit-arduino-uno-1_500x.jpg?v=1695166424",
+    "name": "SpaceExplorer Bot",
+    "sellerName": "GalacticToys Ltd.",
+    "sellerEmail": "galactic.toys@example.com",
+    "subCategory": "Science and Exploration Toys",
+    "price": 49.99,
+    "rating": 4.8,
+    "availableQuantity": 25,
+    "description": "Embark on a space exploration journey with SpaceExplorer Bot. It's a robotic companion that introduces kids to the wonders of space and astronomy."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/mini-dfrobotshop-rover-kit-arduino-uno-1_500x.jpg?v=1695166424",
+    "name": "LanguageLearner Robot",
+    "sellerName": "Polyglot Toys",
+    "sellerEmail": "polyglot.toys@example.com",
+    "subCategory": "Educational and Learning Toys",
+    "price": 34.99,
+    "rating": 4.4,
+    "availableQuantity": 35,
+    "description": "LanguageLearner Robot is designed to make language learning fun for kids. It supports multiple languages and uses interactive methods to enhance language skills."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/mini-dfrobotshop-rover-kit-arduino-uno-1_500x.jpg?v=1695166424",
+    "name": "SolarBot Explorer",
+    "sellerName": "GreenTech Toys",
+    "sellerEmail": "green.tech@example.com",
+    "subCategory": "Science and Exploration Toys",
+    "price": 39.99,
+    "rating": 4.6,
+    "availableQuantity": 28,
+    "description": "SolarBot Explorer is a solar-powered robot that teaches kids about renewable energy and environmental sustainability. It's an eco-friendly and educational choice."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/wlkata-6-axis-mini-robot-arm-mirobot-education-kit-2_5027b6fe-3ab1-4b4e-8fa7-d420a28c6759_500x.jpg?v=1698678323",
+    "name": "ArtBot Creativity Kit",
+    "sellerName": "CreativeKids Emporium",
+    "sellerEmail": "creative.kids@example.com",
+    "subCategory": "Creative Arts and Crafts",
+    "price": 29.99,
+    "rating": 4.3,
+    "availableQuantity": 45,
+    "description": "ArtBot Creativity Kit inspires young artists to explore their imagination. It comes with various tools and features to create unique art projects."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/wlkata-6-axis-mini-robot-arm-mirobot-education-kit-2_5027b6fe-3ab1-4b4e-8fa7-d420a28c6759_500x.jpg?v=1698678323",
+    "name": "DinoBot Adventure",
+    "sellerName": "JurassicToys Co.",
+    "sellerEmail": "jurassic.toys@example.com",
+    "subCategory": "Imaginative Play",
+    "price": 44.99,
+    "rating": 4.9,
+    "availableQuantity": 20,
+    "description": "DinoBot Adventure is a robotic dinosaur companion that takes kids on an imaginative journey back to the time of dinosaurs. It's a blend of fun and education."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/wlkata-6-axis-mini-robot-arm-mirobot-education-kit-2_5027b6fe-3ab1-4b4e-8fa7-d420a28c6759_500x.jpg?v=1698678323",
+    "name": "MusicMaestro Bot",
+    "sellerName": "MelodyMakers Store",
+    "sellerEmail": "melody.makers@example.com",
+    "subCategory": "Creative Arts and Crafts",
+    "price": 37.99,
+    "rating": 4.1,
+    "availableQuantity": 38,
+    "description": "MusicMaestro Bot introduces kids to the world of music. It's a musical companion that teaches the basics of rhythm, melody, and musical composition."
+  },
+  {
+    "pictureURL": "https://www.robotshop.com/cdn/shop/products/wlkata-robotics-ai-automatic-sorting-line-img1_d6f0bbd1-26f3-4567-a4a5-a13614353f0e_500x.jpg?v=1703791953",
+    "name": "RoboChess Grandmaster",
+    "sellerName": "StrategicToys Ltd.",
+    "sellerEmail": "strategic.toys@example.com",
+    "subCategory": "Educational and Learning Toys",
+    "price": 54.99,
+    "rating": 4.7,
+    "availableQuantity": 22,
+    "description": "SolarBot Explorer is a solar-powered robot that teaches kids about renewable energy and environmental sustainability. It's an eco-friendly and educational choice."
+  }
+]
