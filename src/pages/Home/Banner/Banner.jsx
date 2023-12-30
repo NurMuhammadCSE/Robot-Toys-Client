@@ -2,6 +2,7 @@ import { AwesomeButton } from "react-awesome-button";
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "react-awesome-button/dist/styles.css";
+import robot1 from '../../../assets/robot1.png'
 
 const Banner = () => {
   return (
@@ -16,8 +17,8 @@ const Banner = () => {
             <div className="hero justify-center items-center min-h-screen bg-[#a4aebb]">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
-                  src="https://shorturl.at/czBI4"
-                  className="max-w-xl rounded-lg "
+                  src={robot1}
+                  className="max-w-sm rounded-lg "
                 />
                 <div className="text-center text-[#352f31]">
                   <h1 className="text-5xl font-bold">
@@ -59,7 +60,7 @@ const Banner = () => {
 
                 <img
                   src="https://www.robotshop.com/cdn/shop/products/pyxel-the-coding-pet-img_500x.jpg?v=1697734764"
-                  className="max-w-2xl rounded-lg  mb-8 lg:mb-0"
+                  className="max-w-sm rounded-lg  mb-8 lg:mb-0"
                   alt="Box Office News Image"
                 />
               </div>
@@ -70,7 +71,7 @@ const Banner = () => {
               <div className="hero-content flex-col lg:flex-row-reverse items-center">
                 <img
                   src="https://shorturl.at/dHL06"
-                  className="max-w-xl rounded-lg  mb-8 lg:mb-0"
+                  className="max-w-sm rounded-lg  mb-8 lg:mb-0"
                   alt="Box Office News Image"
                 />
                 <div className="text-center text-[#251d14] lg:text-center">
