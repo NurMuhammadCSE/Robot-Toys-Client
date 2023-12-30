@@ -8,6 +8,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import app from "../firebase/firebase.config";
 
@@ -29,6 +30,13 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const updateUserProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
+
   const googleSignIn = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
@@ -43,7 +51,6 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log("current user in auth Provider", currentUser);
-      setLoading(false);
       if (currentUser && currentUser.email) {
         const loggedUser = {
           email: currentUser.email,
@@ -64,6 +71,7 @@ const AuthProvider = ({ children }) => {
       } else {
         localStorage.removeItem("robot-access-token");
       }
+      setLoading(false);
     });
     return () => {
       return unsubscribe();
@@ -76,6 +84,7 @@ const AuthProvider = ({ children }) => {
     createUser,
     signIn,
     googleSignIn,
+    updateUserProfile,
     logOut,
   };
 

@@ -2,7 +2,7 @@ import { AwesomeButton } from "react-awesome-button";
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "react-awesome-button/dist/styles.css";
-import robot1 from '../../../assets/robot1.png'
+import robot1 from "../../../assets/robot1.png";
 
 const Banner = () => {
   return (
@@ -15,10 +15,10 @@ const Banner = () => {
         <Slider>
           <Slide index={0}>
             <div className="hero justify-center items-center min-h-screen bg-[#a4aebb]">
-              <div className="hero-content flex-col lg:flex-row-reverse">
+              <div className="hero-content sm:flex-col lg:flex-row-reverse">
                 <img
                   src={robot1}
-                  className="max-w-sm rounded-lg "
+                  className="max-w-sm rounded-lg mx-auto sm:mb-8 lg:mb-0"
                 />
                 <div className="text-center text-[#352f31]">
                   <h1 className="text-5xl font-bold">
@@ -40,7 +40,7 @@ const Banner = () => {
           </Slide>
           <Slide index={1}>
             <div className="hero min-h-screen bg-[#97847a] py-16">
-              <div className="hero-content flex-col lg:flex-row-reverse items-center">
+              <div className="hero-content sm:flex-col lg:flex-row-reverse items-center">
                 <div className="text-center text-[#] lg:text-center">
                   <h1 className="text-5xl font-bold ">
                     Revolutionize Reality: Embark on a Robotic Extravaganza!
@@ -50,17 +50,15 @@ const Banner = () => {
                     brushstroke on the canvas of tomorrow. We invite you to a
                     world where the mundane is forbidden, and every click
                     propels us into a future where machines echo the rhythm of
-                    human ingenuity.{" "}
+                    human ingenuity.
                   </p>
-
                   <AwesomeButton type="primary" size="large">
                     Embark on the Journey
                   </AwesomeButton>
                 </div>
-
                 <img
                   src="https://www.robotshop.com/cdn/shop/products/pyxel-the-coding-pet-img_500x.jpg?v=1697734764"
-                  className="max-w-sm rounded-lg  mb-8 lg:mb-0"
+                  className="max-w-sm rounded-lg mx-auto mb-8 lg:mb-0"
                   alt="Box Office News Image"
                 />
               </div>
@@ -68,10 +66,10 @@ const Banner = () => {
           </Slide>
           <Slide index={2}>
             <div className="hero min-h-screen bg-[#b9505e] py-16">
-              <div className="hero-content flex-col lg:flex-row-reverse items-center">
+              <div className="hero-content sm:flex-col lg:flex-row-reverse items-center">
                 <img
                   src="https://shorturl.at/dHL06"
-                  className="max-w-sm rounded-lg  mb-8 lg:mb-0"
+                  className="max-w-sm rounded-lg mx-auto mb-8 lg:mb-0"
                   alt="Box Office News Image"
                 />
                 <div className="text-center text-[#251d14] lg:text-center">

@@ -56,23 +56,13 @@ const Login = () => {
                   placeholder="password"
                   className="input input-bordered"
                 />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Confirm Password</span>
-                </label>
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  placeholder="Confirm Password"
-                  className="input input-bordered"
-                />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
                 </label>
               </div>
+
               <div className="form-control mt-6">
                 <input
                   className="btn btn-primary"
@@ -82,7 +72,7 @@ const Login = () => {
               </div>
             </form>
             <p className="my-4 text-center">
-             Brand New to Robot Toys{" "}
+              Brand New to Robot Toys{" "}
               <Link className="text-orange-600 font-bold" to="/signup">
                 Sign Up
               </Link>{" "}
