@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 const AllToys = () => {
   const allToys = useLoaderData();
@@ -18,13 +19,9 @@ const AllToys = () => {
     }
   };
 
-  // Check if data is still loading
-  if (!allToys) {
-    // Show a spinner or any loading indicator
-    return <span className="loading loading-ring loading-lg"></span>;
-  }
   return (
-    <div className="overflow-x-auto my-14">
+    <div className="overflow-x-auto mb-10">
+      <SectionTitle heading={"All Toys"}></SectionTitle>
       <table className="table">
         {/* head */}
         <thead>
