@@ -17,6 +17,12 @@ const AllToys = () => {
       navigate("/login");
     }
   };
+
+  // Check if data is still loading
+  if (!allToys) {
+    // Show a spinner or any loading indicator
+    return <span className="loading loading-ring loading-lg"></span>;
+  }
   return (
     <div className="overflow-x-auto my-14">
       <table className="table">
