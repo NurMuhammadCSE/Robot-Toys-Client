@@ -13,7 +13,7 @@ const Category = () => {
   ];
 
   useEffect(() => {
-    fetch("http://localhost:5000/toys")
+    fetch("http://localhost:5000/allToys")
       .then((res) => res.json())
       .then((data) => {
         setAllToys(data);
@@ -21,7 +21,7 @@ const Category = () => {
   }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    <div>
+    <div className="my-14">
       <SectionTitle
         heading={"Category Showcase"}
         subHeading={"Discover a World of Robotic Toys"}
@@ -36,7 +36,7 @@ const Category = () => {
           </TabList>
         </div>
 
-        <div className="my-10">
+        <div>
           {categories.map((category, index) => (
             <TabPanel key={index}>
               {/* <h3>{category}</h3> */}

@@ -14,10 +14,15 @@ import img3 from "../../../assets/image3.jpg";
 import img4 from "../../../assets/image4.png";
 import img5 from "../../../assets/image5.jpg";
 import img6 from "../../../assets/image6.jpg";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const SwiperGallery = () => {
   return (
-    <div>
+    <div className="my-14">
+      <SectionTitle
+        heading={"Order Online"}
+        subHeading={"Always here for you, 24/7 customer service"}
+      ></SectionTitle>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
