@@ -3,6 +3,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const AddToy = () => {
   const {
@@ -12,9 +13,14 @@ const AddToy = () => {
     formState: { errors },
   } = useForm();
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data); // Handle form submission here
+    data.price = parseFloat(data.price);
+    data.rating = parseFloat(data.rating);
+    data.availableQuantity = parseFloat(data.availableQuantity);
+
     fetch("http://localhost:5000/addToy", {
       method: "POST",
       headers: {
@@ -34,6 +40,7 @@ const AddToy = () => {
             showConfirmButton: false,
             timer: 1500,
           });
+          navigate("/");
         }
       });
   };
