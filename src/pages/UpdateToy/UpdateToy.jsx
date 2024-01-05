@@ -157,6 +157,7 @@ const UpdateToy = () => {
                 className="select select-bordered"
                 defaultValue={subCategory}
               >
+                
                 <option value="Educational and Learning Toys">
                   Educational and Learning Toys
                 </option>

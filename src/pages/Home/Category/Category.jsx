@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+import { AuthContext } from "../../../provider/AuthProvider";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Category = () => {
   const [allToys, setAllToys] = useState([]);
@@ -11,6 +14,31 @@ const Category = () => {
     "Creative Arts and Crafts",
     "Imaginative Play",
   ];
+  const navigate = useNavigate();
+
+  const { user } = useContext(AuthContext);
+
+  const handleViewDetails = (toyId) => {
+    // Check if the user is logged in (you need to implement this logic)
+    if (user && user?.email) {
+      // Redirect to the Details Page
+      navigate(`/details/${toyId}`);
+    } else {
+      Swal.fire({
+        title: "You are not logged in? ❌",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Please, Login",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Redirect to the login page
+          navigate("/login");
+        }
+      });
+    }
+  };
 
   useEffect(() => {
     fetch("http://localhost:5000/allToys")
@@ -57,7 +85,10 @@ const Category = () => {
                           <h2 className="card-title">{filteredToy.name}</h2>
                           <h2 className="card-title">${filteredToy.price}</h2>
                           <div className="card-actions">
-                            <button className="btn btn-primary">
+                            <button
+                              onClick={() => handleViewDetails(filteredToy._id)}
+                              className="btn btn-success"
+                            >
                               View Details
                             </button>
                           </div>
