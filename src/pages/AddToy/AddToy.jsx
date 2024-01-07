@@ -21,7 +21,7 @@ const AddToy = () => {
     data.rating = parseFloat(data.rating);
     data.availableQuantity = parseFloat(data.availableQuantity);
 
-    fetch("http://localhost:5000/addToy", {
+    fetch("https://robot-toys-server.vercel.app/addToy", {
       method: "POST",
       headers: {
         "content-type": "application/json",

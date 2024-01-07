@@ -13,7 +13,9 @@ const MyToys = () => {
     setLoading(true);
     setError(null);
 
-    fetch(`http://localhost:5000/sellerToys?email=${user?.email}`)
+    fetch(
+      `https://robot-toys-server.vercel.app/sellerToys?email=${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => {
         setMyToys(data);
@@ -37,7 +39,7 @@ const MyToys = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/addedToy/${id}`, {
+        fetch(`https://robot-toys-server.vercel.app/addedToy/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -66,7 +68,11 @@ const MyToys = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div className="my-14 flex justify-center items-center text-2xl font-bold">
+        {error}
+      </div>
+    );
   }
 
   if (myToys.length === 0) {

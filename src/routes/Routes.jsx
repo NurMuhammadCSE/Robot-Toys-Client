@@ -11,12 +11,13 @@ import AddToy from "../pages/AddToy/AddToy";
 import MyToys from "../pages/MyToys/MyToys";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
 import NotFound from "../pages/NotFound/NotFound";
+import ServerDown from "../pages/ServerDown/ServerDown";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement: <NotFound></NotFound>,
+    errorElement: <ServerDown></ServerDown>,
     children: [
       {
         path: "/",
@@ -33,7 +34,7 @@ export const router = createBrowserRouter([
             <AllToys></AllToys>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/allToys"),
+        loader: () => fetch("https://robot-toys-server.vercel.app/allToys"),
       },
       {
         path: "details/:id",
@@ -43,7 +44,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/details/${params.id}`),
+          fetch(`https://robot-toys-server.vercel.app/details/${params.id}`),
       },
       {
         path: "addToy",
@@ -69,7 +70,7 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/details/${params.id}`),
+          fetch(`https://robot-toys-server.vercel.app/details/${params.id}`),
       },
       {
         path: "login",
@@ -78,6 +79,10 @@ export const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },

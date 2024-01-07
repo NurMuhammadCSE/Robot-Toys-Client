@@ -32,7 +32,7 @@ const UpdateToy = () => {
     data.rating = parseFloat(data.rating);
     data.availableQuantity = parseFloat(data.availableQuantity);
 
-    fetch(`http://localhost:5000/updateToy/${_id}`, {
+    fetch(`https://robot-toys-server.vercel.app/updateToy/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -157,7 +157,6 @@ const UpdateToy = () => {
                 className="select select-bordered"
                 defaultValue={subCategory}
               >
-                
                 <option value="Educational and Learning Toys">
                   Educational and Learning Toys
                 </option>
