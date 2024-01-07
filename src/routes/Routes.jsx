@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
         element: <Blogs></Blogs>,
       },
       {
-        path: "allToys",
+        path: "/allToys",
         element: (
           <PrivateRoute>
             <AllToys></AllToys>
@@ -68,7 +68,8 @@ export const router = createBrowserRouter([
             <UpdateToy></UpdateToy>
           </PrivateRoute>
         ),
-        loader: (({params}) => fetch(`http://localhost:5000/details/${params.id}`))
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/details/${params.id}`),
       },
       {
         path: "login",

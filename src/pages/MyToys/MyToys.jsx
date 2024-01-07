@@ -59,7 +59,7 @@ const MyToys = () => {
 
   if (loading) {
     return (
-      <div>
+      <div className="flex justify-center items-center my-14">
         <span className="loading loading-ring loading-lg"></span>
       </div>
     ); // You can replace this with a spinner component

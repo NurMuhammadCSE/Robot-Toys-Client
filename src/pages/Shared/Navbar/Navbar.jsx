@@ -24,9 +24,9 @@ const Navbar = () => {
       <li>
         <Link to={"/addToy"}>Add A Toy</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to={"/blogs"}>Blogs</Link>
-      </li>
+      </li> */}
 
       {user?.email ? (
         <>
@@ -50,7 +50,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar font-bold bg-[#dfd8d0] justify-between">
+    <div className="navbar font-bold justify-between">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

@@ -20,8 +20,8 @@ const SwiperGallery = () => {
   return (
     <div className="my-14">
       <SectionTitle
-        heading={"Order Online"}
-        subHeading={"Always here for you, 24/7 customer service"}
+        heading={"Featured Toys"}
+        subHeading={"A child's imagination is the best toy"}
       ></SectionTitle>
       <Swiper
         slidesPerView={4}
